@@ -25,13 +25,18 @@ Alle Align Tags haben **??**
 * **Rechts:** ??r
 * **Schließender Tag:** /??
 
-## Was es kann
+## Beispiel
+!!i!!b??cHallo Welt!/??/!!/!!
+**wird zu**
+\[style type="italic"\]\[style type="bold"\]\[align type="center"\]Hallo Welt!\[/align\]\[/style\]\[/style\]
+
+# Was es kann
 * 3 Character lange Tags durch die FF.de Tags ersetzen
 * Zählen, ob es gleich viele öffnende und schließende style/align Tags gibt
 * Dir sagen, wo du suchen musst, falls Tags fehlen
 * Dir fehlende Klammern, nervige Kämpfe mit dem Editor und endloses Copy-Pasten ersparen
 
-## Was es nicht kann
+# Was es nicht kann
 * Checken, ob die Schachtelung stimmt
 * Vernúnftiges Markdown konvertieren
 * \[Normal\] Tags entfernen
