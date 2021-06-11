@@ -3,6 +3,7 @@ FF.de uses annoyingly long tags. Here's a script that replaces them and checks f
 
 ## Anleitung
 * Python3 installieren 
+* Kapitel schreiben und anstatt der langen FF Tags die kurzen nutzen
 * Kapitel in inp.txt im gleichen Ordner wie den TagChecker speichern
 * TagChecker laufen lassen
 * Profit!
