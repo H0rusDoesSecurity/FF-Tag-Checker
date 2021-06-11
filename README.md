@@ -27,7 +27,9 @@ Alle Align Tags haben **??**
 
 ## Beispiel
 !!i!!b??cHallo Welt!/??/!!/!!
+
 **wird zu**
+
 \[style type="italic"\]\[style type="bold"\]\[align type="center"\]Hallo Welt!\[/align\]\[/style\]\[/style\]
 
 # Was es kann
