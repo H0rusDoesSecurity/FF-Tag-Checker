@@ -11,18 +11,18 @@ FF.de uses annoyingly long tags. Here's a script that replaces them and checks f
 # Tag Übersicht!
 ## Style Tags
 Alle Style Tags haben **!!** 
-**Kursiv:** !!i
-**Fett:** !!b
-**Unterstrichen:** !!u
-**Durchgestrichen:** !!s
 
-**Schließender Tag:** /!!
+* **Kursiv:** !!i
+* **Fett:** !!b
+* **Unterstrichen:** !!u
+* **Durchgestrichen:** !!s
+* **Schließender Tag:** /!!
 
 ## Align Tags
 Alle Align Tags haben **??**
-**Mittig:** ??c
-**Links:** ??l
-**Rechts:** ??r
+* **Mittig:** ??c
+* **Links:** ??l
+* **Rechts:** ??r
 
 ## Was es kann
 * 3 Character lange Tags durch die FF.de Tags ersetzen
@@ -33,5 +33,5 @@ Alle Align Tags haben **??**
 ## Was es nicht kann
 * Checken, ob die Schachtelung stimmt
 * Vernúnftiges Markdown konvertieren
-* Normal Tags entfernen
+* \[Normal\] Tags entfernen
 
