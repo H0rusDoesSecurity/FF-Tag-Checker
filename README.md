@@ -23,6 +23,7 @@ Alle Align Tags haben **??**
 * **Mittig:** ??c
 * **Links:** ??l
 * **Rechts:** ??r
+* **Schließender Tag:** /??
 
 ## Was es kann
 * 3 Character lange Tags durch die FF.de Tags ersetzen
