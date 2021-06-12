@@ -8,36 +8,44 @@ print("  \_/\__,_|\__, |\____|_| |_|\___|\___|_|\_\___|_|   ")
 print("            __/ |                                    ")                             
 print("  v0.1     |___/                by H0rus/WeilIchsKann")                            
 print("=====================================================")
+
+# kurze Tags setzen
+italic = '!!i'
+bold = '!!b'
+underline = '!!u'
+linethrough = '!!l'
+closestyle = '/!!'
+
+center = '??c'
+left = '??l'
+right = '??r'
+closealign = '/??'
+
 inp = open("inp.txt", "r")
 outp = open("outp.txt", "w")
-style = 0
-align = 0
-zeile = 1
-for line in inp:
-    a = line
-    style = a.count("!!i")+ a.count("!!b") + a.count("!!u") + a.count("!!l") - a.count("/!!")
+for num, line in enumerate(inp, 1):
+    # öffnende und schließende tags záhlen
+    style = line.count(italic)+ line.count(bold) + line.count(underline) + line.count(linethrough) - line.count(closestyle)
     if (style > 0):
-        print ("Zeile ", zeile, ": ", style, " fehlende(r) [/style] Tag\n\t", a[0:35].strip('\n'), "...\n",sep='')
+        print ("Zeile ", num, ": ", style, " fehlende(r) [/style] Tag\n\t", line[0:35].strip('\n'), "...\n",sep='')
     if (style <0):
-        print ("Zeile ", zeile, ": ", style*-1, " [/style] Tag(s) zu viel\n\t", zeile, ": ", a[0:35].strip('\n'), "...\n", sep='')
-    align = a.count("??l")+ a.count("??r") + a.count("??c") - a.count("/??")
+        print ("Zeile ", num, ": ", style*-1, " [/style] Tag(s) zu viel\n\t", zeile, ": ", line[0:35].strip('\n'), "...\n", sep='')
+    align = line.count(left)+ line.count(right) + line.count(center) - line.count(closealign)
     if (align > 0):
-        print ("Zeile ", zeile, ": ",align, " fehlende(r) [/align] Tag\n\t", a[0:35].strip('\n'), "...\n", sep='')
+        print ("Zeile ", num, ": ",align, " fehlende(r) [/align] Tag\n\t", line[0:35].strip('\n'), "...\n", sep='')
     if (align < 0):
-        print ("Zeile ", zeile, ": ",align*-1, " [/align] Tag(s) zu viel\n\t", a[0:35].strip('\n'), "...\n", sep='')
-    a = a.replace("!!i", "[style type=\"italic\"]")
-    a = a.replace("!!b", "[style type=\"bold\"]")
-    a = a.replace("!!u", "[style type=\"underlined\"]")
-    a = a.replace("!!l", "[style type=\"linethrough\"]")
-    a = a.replace("/!!", "[/style]")
-    a = a.replace("??l", "[align type=\"left\"]")
-    a = a.replace("??r", "[align type=\"right\"]")
-    a = a.replace("??c", "[align type=\"center\"]")
-    a = a.replace("/??", "[/align]")
-    outp.write(a)
-    style = 0
-    align = 0
-    zeile+=1
+        print ("Zeile ", num, ": ",align*-1, " [/align] Tag(s) zu viel\n\t", line[0:35].strip('\n'), "...\n", sep='')
+    # ersetzen
+    line = line.replace(italic, "[style type=\"italic\"]")
+    line = line.replace(bold, "[style type=\"bold\"]")
+    line = line.replace(underline, "[style type=\"underlined\"]")
+    line = line.replace(linethrough, "[style type=\"linethrough\"]")
+    line = line.replace(closestyle, "[/style]")
+    line = line.replace(left, "[align type=\"left\"]")
+    line = line.replace(right, "[align type=\"right\"]")
+    line = line.replace(center, "[align type=\"center\"]")
+    line = line.replace(closealign, "[/align]")
+    outp.write(line)
 inp.close()
 outp.close()
 print("Fertig!")
