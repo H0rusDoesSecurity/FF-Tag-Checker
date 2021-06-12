@@ -40,6 +40,6 @@ Alle Align Tags haben **??**
 
 # Was es nicht kann
 * Checken, ob die Schachtelung stimmt
-* Vernúnftiges Markdown konvertieren
+* Vernünftiges Markdown konvertieren
 * \[Normal\] Tags entfernen
 
