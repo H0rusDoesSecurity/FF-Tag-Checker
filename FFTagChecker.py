@@ -48,5 +48,4 @@ for num, line in enumerate(inp, 1):
     outp.write(line)
 inp.close()
 outp.close()
-print("Fertig!")
-input()
+input("Fertig!")
